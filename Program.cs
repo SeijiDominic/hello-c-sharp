@@ -40,16 +40,18 @@ namespace PersonalInfoProcessor {
         if (monthDiff < 0) 
         {
           yearDiff--;
-          monthDiff = 12 + monthDiff;       //I feel like there are edge cases that may break the program here. Hmm.
+          monthDiff = 12 + monthDiff;
         }
 
         if (yearDiff < 0) 
         {
           Console.WriteLine("You are not born yet, step time traveler :\')");
-          return 1;
         }
-
-        Console.WriteLine("You are " + yearDiff + " years, " + monthDiff + " months, and " + dayDiff + " days old.");
+        else 
+        {
+        
+          Console.WriteLine("You are " + yearDiff + " years, " + monthDiff + " months, and " + dayDiff + " days old.");
+        }
         return 0;
       } 
       catch(FormatException e) 
